@@ -3,7 +3,13 @@
   "homepage": "https://rana-fawad.github.io/Twitter-Clone",
   "version": "0.1.0",
   "private": true,
+  "devDependencies" : {
+    "my_test_framework": "^3.1.0",
+    "another_dev_dep": "1.0.0 - 1.2.0"
+  },
   "dependencies": {
+    "my_dep": "^1.0.0",
+    "another_dep": "~2.2.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.0",

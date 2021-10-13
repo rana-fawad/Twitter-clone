@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { validate } from "./helper";
+// import { validate } from "./helper";
 import { signup } from "../../utils/api";
 import { Box } from "@mui/system";
 import React from "react";
@@ -17,7 +17,7 @@ const SignupForm = () => {
     confirmPassword: "",
     handle: "",
   });
-  const [errors, setErrors] = useState({});
+  // const [errors, setErrors] = useState({});
   const togglePassword = () => {
     setShowPassword(prevState => !prevState)
   };  
@@ -29,15 +29,15 @@ const SignupForm = () => {
   };
 
   const handleSubmit = (event) => {
-    const errors = validate(state) 
+    // const errors = validate(state) 
    
     event.preventDefault();
     
-    if (Object.keys(errors).length > 0) {
-      return setErrors(errors);
-    } else {
-      setErrors({})
-    }
+    // if (Object.keys(errors).length > 0) {
+    //   return setErrors(errors);
+    // } else {
+    //   setErrors({})
+    // }
 
 
     console.log(state);
@@ -48,7 +48,7 @@ const SignupForm = () => {
     })
     .catch(error => {
       console.error(error.response)
-      setErrors(error.response.data)
+      // setErrors(error.response.data)
     })
 
   };
