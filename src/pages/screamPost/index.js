@@ -3,7 +3,7 @@ import { Grid, ListItem,  } from "@mui/material";
 // import { makeStyles } from "@mui/styles";
 import Sidebar from "../sidebar/index";
 import { useParams } from "react-router";
-import { useEffect, useState, } from "react";
+import { useEffect, useState } from "react";
 import { getScream } from "../../utils/api";
 import ScreamCard from "../../Component/screamCard";
 
@@ -11,13 +11,13 @@ const ScreamID = () => {
     const {screamId} = useParams();
     const [scream , setScream] =useState({});
 
-    // const _init = async() => {
-    // }
+    const _init = async () => {
+        let data = await getScream(screamId);
+        setScream(data)
+        console.log(data)
+    }
     useEffect(() => {
-      // _init() 
-      let data = getScream(screamId);
-      setScream(data)
-      console.log(data)
+        _init() 
     },[screamId])
   return (
     <>
